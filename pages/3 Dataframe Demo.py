@@ -7,7 +7,7 @@ from urllib.error import URLError
 
 st.set_page_config(page_title="DataFrame Demo", page_icon="📊")
 
-with open("/Users/mingming/Desktop/Streamlit/pages/style.css")as f:
+with open("./style.css")as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 st.markdown("# DataFrame Demo")
