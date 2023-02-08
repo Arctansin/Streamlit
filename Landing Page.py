@@ -6,6 +6,7 @@ Created on Tue Feb  7 22:04:57 2023
 @author: mingming
 """
 import streamlit as st
+from streamlit_card import card
 
 st.set_page_config(
     page_title="Hello",
@@ -16,15 +17,7 @@ with open("style.css")as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
     
     
-
-html_string = "<h3>this is an html string</h3>"
-
-st.markdown(html_string, unsafe_allow_html=True)
-
-
 st.write("# Welcome to Streamlit! 👋")
-
-st.sidebar.success("Select a demo above.")
 
 st.markdown(
     """
@@ -43,3 +36,34 @@ st.markdown(
     - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
 """
 )
+
+from PIL import Image
+background=Image.open("background1.jpg")
+st.image(background)
+
+from streamlit_extras.switch_page_button import switch_page
+col1,col2=st.columns(2)
+with col1:
+    DataFrame_Page=card(
+        title="Go to x1 demo",
+        text="this is for x1 demoss",
+        image="http://localhost:8501/media/b09ca6a072c8a337899c4bf69d2bb136f53e7c983b677a916a381f94.jpg",
+        key="card 1"
+        )
+    if DataFrame_Page:
+        switch_page("Plotting Demo")
+with col2:
+    DataFrame_Page=card(
+        title="Go to x2 demo",
+        text="this is for x2 demoss",
+        image="http://localhost:8501/media/b09ca6a072c8a337899c4bf69d2bb136f53e7c983b677a916a381f94.jpg",
+        key="card 2"
+        )
+    if DataFrame_Page:
+        switch_page("Mapping Demo")
+
+
+
+
+
+
