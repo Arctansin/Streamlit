@@ -47,7 +47,7 @@ with col1:
     DataFrame_Page=card(
         title="Go to x1 demo",
         text="this is for x1 demoss",
-        image="http://localhost:8501/media/b09ca6a072c8a337899c4bf69d2bb136f53e7c983b677a916a381f94.jpg",
+        image=None,
         key="card 1"
         )
     if DataFrame_Page:
@@ -56,7 +56,7 @@ with col2:
     DataFrame_Page=card(
         title="Go to x2 demo",
         text="this is for x2 demoss",
-        image="http://localhost:8501/media/b09ca6a072c8a337899c4bf69d2bb136f53e7c983b677a916a381f94.jpg",
+        image=None,
         key="card 2"
         )
     if DataFrame_Page:
